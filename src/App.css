@@ -1,38 +1,41 @@
-.App {
-  text-align: center;
+/* Base container padding */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Top-level app container */
+.app-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
-.App-link {
-  color: #61dafb;
+/* Add spacing around ThemeToggle if needed */
+.theme-toggle-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+/* Ensure main content has room to breathe */
+main {
+  flex-grow: 1;
+  padding-bottom: 2rem;
+}
+
+/* Optional footer styling */
+.footer {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.875rem;
+  opacity: 0.6;
+}
+
+/* Responsive tweaks */
+@media (min-width: 768px) {
+  .theme-toggle-wrapper {
+    margin-bottom: 2rem;
   }
 }
